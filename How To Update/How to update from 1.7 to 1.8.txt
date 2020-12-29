@@ -1,0 +1,7 @@
+How to update from v1.7 to v1.8
+
+-------- IMPORTANT: REMEMBER TO DO A FULL-BACKUP (FTP/MYSQL) BEFORE STARTING ----------
+I forgot to include the admin.php file so just upload admin.php file on the folder called /sources/ on your FTP, and it should work.
+
+---------------------------------------------------------------------------------------
+Or you can do a clean-install.

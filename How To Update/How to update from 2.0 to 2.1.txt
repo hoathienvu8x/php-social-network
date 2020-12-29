@@ -1,0 +1,8 @@
+How to update from v2.0 to v2.1
+
+-------- IMPORTANT: REMEMBER TO DO A FULL-BACKUP (FTP/MYSQL) BEFORE STARTING ----------
+---------------------------------------------------------------------------------------
+Files affected:
+/sources/admin.php
+---------------------------------------------------------------------------------------
+Or you can do a clean-install.

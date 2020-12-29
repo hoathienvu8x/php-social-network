@@ -1,0 +1,22 @@
+How to update from v1.5 to v1.6
+
+-------- IMPORTANT: REMEMBER TO DO A FULL-BACKUP (FTP/MYSQL) BEFORE STARTING ----------
+
+Open your PHP My Admin and navigate to the database of the script, now click the SQL tab and run the following query:
+
+ALTER TABLE users ADD background VARCHAR(256) NOT NULL AFTER salted;
+
+If this was successfull can proceed to the next step:
+---------------------------------------------------------------------------------------
+Now copy the following files on your server:
+/images/backgrounds/ (the entire "backgrounds" folder)
+/sources/me.php
+/sources/mentions.php
+/sources/profile.php
+/sources/settings.php
+/includes/functions.php
+/skin/settings/general.html
+/skin/wrapper.html
+style.css
+---------------------------------------------------------------------------------------
+Or you can do a clean-install.

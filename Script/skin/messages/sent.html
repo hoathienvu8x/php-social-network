@@ -1,0 +1,24 @@
+<div class="new-post" id="new-post"></div>
+<div class="message">
+	<div class="message-picture">
+		<a href="{$url}/index.php?a=profile&u={$username}">{$image}</a>
+	</div>
+	<div class="message-top-container">
+		<div class="message-top">
+			<div class="message-author">
+				<a href="{$url}/index.php?a=profile&u={$username}">{$username}</a>
+			</div>
+			<div class="timeago{$b}" title="{$time}">
+				{$time}
+			</div>
+		</div>
+	</div>
+	<div class="message-container">
+		<div class="message-message">
+			{$message}
+		</div>
+	</div>
+	<div class="message-bottom-container">
+		{$delete}
+	</div>
+</div>

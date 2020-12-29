@@ -1,0 +1,9 @@
+How to update from v2.5 to v2.6
+
+-------- IMPORTANT: REMEMBER TO DO A FULL-BACKUP (FTP/MYSQL) BEFORE STARTING ----------
+---------------------------------------------------------------------------------------
+Upload the following files to your server on their specific location.
+
+/sources/profile.php
+---------------------------------------------------------------------------------------
+Or you can do a clean-install.

@@ -1,0 +1,31 @@
+How to update from v2.3 to v2.4
+
+-------- IMPORTANT: REMEMBER TO DO A FULL-BACKUP (FTP/MYSQL) BEFORE STARTING ----------
+---------------------------------------------------------------------------------------
+Open your PHP My Admin and navigate to the database of the script, now click the SQL tab and run the following query:
+
+CREATE TABLE IF NOT EXISTS `private` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `from` int(11) NOT NULL,
+  `to` int(11) NOT NULL,
+  `message` text COLLATE utf8_unicode_ci NOT NULL,
+  `read` int(11) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+
+If you receive a message that the query was successfull then you have updated the database.
+---------------------------------------------------------------------------------------
+Upload the following files to your server on their specific location.
+
+/includes/config.php (be careful! you must set the $conf['user'], $conf['pass'], $conf['name'] and $conf['url'] to the new files, you can take them from your current /includes/config.php from your FTP)
+/includes/functions.php
+/requests/post_messages.php
+/sources/messages.php
+/skin/messages/ (entire folder)
+/images/message.png
+/images/icons/read.png
+/images/icons/unread.png
+/images/icons/new_message.png
+---------------------------------------------------------------------------------------
+Or you can do a clean-install.

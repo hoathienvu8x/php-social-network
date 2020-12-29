@@ -1,0 +1,21 @@
+<h3>Security Settings</h3>
+{$message}
+<div class="divider"></div>
+<div class="inner-page">
+		<div class="settings-image">{$image}</div>
+		<div class="settings-name">{$username}</div>
+		<div class="settings-change"><a href="{$url}/index.php?a=settings">General Settings</a><br /><a href="{$url}/index.php?a=settings&b=avatar">Change Profile Picture</a><br /><a href="{$url}/index.php?a=settings&b=security">Change Password</a></div>
+	</div>
+<div class="divider"></div>
+<div class="inner-page">
+	<div class="addurlSmall">Leave it intact if you don't want to change it</div><br />
+	<form action="{$url}/index.php?a=settings&b=security" method="post">
+	<div class="addurlAds">
+		<div class="input-container">Password</div> <input type="password" name="pwd" />
+	</div>
+</div>
+<div class="divider"></div>
+<div class="inner-page">
+	<div class="input-container"></div><input type="submit" value="Change Password"/>
+	</form>
+</div>

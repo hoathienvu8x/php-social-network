@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>PHP Social Network</title>
+	<style type="text/css" media="screen">
+	body { font-family: Tahoma, Verdana; font-size: 0.9em;}
+	h1 { color: #666;
+	font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+	font-style: italic;
+	font-weight: normal;
+	}
+	h2 {
+	color: #666;
+	font-family: "Warnock Pro", "Goudy Old Style","Palatino","Book Antiqua", Georgia, serif;
+	font-style: italic;
+	}
+	p, table, hr, .box { margin-bottom:25px; }
+	.box p { margin-bottom:10px; }
+	a { color: #0e7588;}
+	a:hover { color: #a20047;}
+	</style>
+</head>
+
+
+<body>
+	<div class="container" style="margin: 0 auto; width: 830px;">
+	
+		<h3 class="center alt">&ldquo;PHP Social Network Script&rdquo; Documentation by &ldquo;Pricop Alexandru&rdquo;</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;PHP Social Network v2.6&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 1/13/2013<br>
+					By: Pricop Alexandru - <a href="http://pricop.info" target="_blank">www.pricop.info</a><br>
+					Email: <a href="mailto:pricop2008@yahoo.com">pricop2008@yahoo.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing my script. If you have any questions that are beyond the scope of this help file, please feel free to email via my user page contact form <a href="http://codecanyon.net/user/Pricop">here</a>, or email me at <strong>pricop2008@yahoo.com</strong>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#preparing">Preparing...</a></li>
+			<li><a href="#upload">Upload process...</a></li>
+			<li><a href="#installation">Installation...</a></li>
+			<li><a href="#configure">Configure the script...</a></li>
+			<li><a href="#faq">Faq...</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="preparing"><strong>1. Setting up your MySQL and FTP server</strong> - <a href="#toc">top</a></h3>
+		<p>This script requires PHP 5 and MySQL.</p>
+		Now, first thing you want to do, is to make sure you create a MySQL database along with an user for it.<br /><br />
+		So your requirements are:<br /><br />
+		A) A MySQL database + MySQL user<br />
+		B) Domain name + FTP server.<br />
+
+		<hr>
+
+		<h3 id="upload"><strong>2. Upload process</strong> - <a href="#toc">top</a></h3>
+		<ol>
+		<li>
+		The first step is to upload the content inside the folder "Script" (<strong>IMPORTANT NOTE:</strong> Upload what's inside the folder Script, not the script folder) into your <strong>public_html</strong> folder or into your default FTP root folder.</li>
+		<li>
+		The second thing is to upload into your .sql file from the folder called "MySQL" using the <strong>IMPORT</strong> function available in MySQL.</li>
+		</ol>
+		<hr>
+		
+		<h3 id="installation"><strong>3. Installation process</strong> - <a href="#toc">top</a></h3>
+		
+		Now, after you uploaded everything, you can start the installation process.<br />
+		
+		<h3>Changes inside Script</h3>
+		<ol>
+		<li>With a text editor (e.g.: Notepad), open the following file located inside the 'Script/includes/' folder: <strong>config.php</strong>.<br />
+		Now, replace what's inside the brackets (e.g.: 'YOURDBNAME') with your MySQL settings, you should have something like this: 
+		<pre>
+		$conf['user'] = 'YOURDBUSER';
+		$conf['pass'] = 'YOURDBPASS';
+		$conf['name'] = 'YOURDBNAME';
+		$conf['url'] = 'http://yourdomain.com';
+		$conf['mail'] = 'example@example.org';
+		</pre>
+		save and exit.
+		</li>
+		
+		</ol>
+		Now, after you finished the steps above, upload the edited file <strong>config.php</strong> to <strong>includes</strong> folder from FTP.
+		<hr>
+		
+		<h3 id="configure"><strong>4. Configuration of the script</strong> - <a href="#toc">top</a></h3>
+		
+		The default username is "admin", and the password is "pricop2008@yahoo.com" without quotes (the admin link is located in footer).<br />
+		
+		<h3>Changes inside the Admin Panel</h3>
+		<ol>
+		<li>If you turn on the reCaptcha form for registration, you must obtain your Public & Private key from <a href="http://reCaptcha.net" target="_blank">reCaptcha.net</a> and insert them into the Admin Panel.</li>
+		<li>You can change the Admin password by loggin in into your Admin Panel -> Security.</li>
+		<li>If you want to change the format that users are allowed to use on their profile, you can add more in the Admin Panel, all formats must be separated by comma ",", e.g: png,bmp,jpg</li>
+		<li>If you want to censor any words, you can add them in the Admin Panel, and they will be stripped off, the censored words must be separated by comma ",", e.g: word1,word2,word3</li>
+		
+		</ol>
+		<hr>
+		
+		
+		<h3 id="faq"><strong>5. Faq</strong> - <a href="#toc">top</a></h3>
+		
+		<ol>
+		<li><strong>Q:</strong> I want to modify a text or something about the design...<br />
+		<strong>A:</strong> You can change anything visual from the theme located in: /skins/</li>
+		<li><strong>Q:</strong> I want to change the content of the Privacy Policy, Contact, Disclaimer and/or ToS page.<br />
+		<strong>A:</strong> Open skin/page/ and open the .html file you want to edit, save & upload, that's it.</li>
+		<li><strong>Q:</strong> I have problems/questions related to the script, how can I contact you...<br />
+		<strong>A:</strong> If you want a live chat, you can add me on Y!Messenger: pricop2008, if you want to contact me via email, pricop2008@yahoo.com
+		</ol>
+		<hr >
+		
+		<p class="append-bottom alt large"><strong>Pricop Alexandru</strong></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

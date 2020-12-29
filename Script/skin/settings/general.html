@@ -1,0 +1,63 @@
+<h3>General Settings</h3>
+{$message}
+<div class="divider"></div>
+<div class="inner-page">
+	<div class="settings-image">{$image}</div>
+	<div class="settings-name">{$username}</div>
+	<div class="settings-change"><a href="{$url}/index.php?a=settings">General Settings</a><br /><a href="{$url}/index.php?a=settings&b=avatar">Change Profile Picture</a><br /><a href="{$url}/index.php?a=settings&b=security">Change Password</a></div>
+</div>
+<div class="divider"></div>
+<div class="inner-page">
+	<div class="input-container">Background <span style="color: #666; font-size: 10px;">profile</span></div>
+	<span class="backgrounds-container">
+		<a href="{$url}/index.php?a=settings&bg=0"><img src="{$url}/images/backgrounds/0.png" /></a>
+		<a href="{$url}/index.php?a=settings&bg=1"><img src="{$url}/images/backgrounds/1.png" /></a>
+		<a href="{$url}/index.php?a=settings&bg=2"><img src="{$url}/images/backgrounds/2.png" /></a>
+		<a href="{$url}/index.php?a=settings&bg=3"><img src="{$url}/images/backgrounds/3.png" /></a>
+		<a href="{$url}/index.php?a=settings&bg=4"><img src="{$url}/images/backgrounds/4.png" /></a>
+	</span>
+	<form action="{$url}/index.php?a=settings" method="post">
+	<div class="addurlAds">
+		<div class="input-container">Name</div> <input type="text" name="name" value="{$currentName}" />
+	</div>
+	<br />
+	<div class="addurlAds">
+		<div class="input-container">Email</div> <input type="text" name="email" value="{$currentEmail}" />
+	</div>
+	<br />
+	<div class="addurlAds">
+		<div class="input-container">Location</div> <input type="text" name="location" value="{$currentLocation}" />
+	</div>
+	<br />
+	<div class="addurlAds">
+		<div class="input-container">Website</div> <input type="text" name="website" value="{$currentWebsite}" />
+	</div>
+		<div class="input-container">Private<br /><span style="color: #666; font-size: 10px;">profile</span></div>
+	<select name="dropdown">
+		<option value="0" {$off}>Off</option>
+		<option value="1" {$on}>On (completely private)</option>
+		<option value="2" {$semi}>On (only followings allowed)</option>
+	</select>
+	<br />
+	<div class="addurlAds">
+		<div class="input-container">Facebook<br /><span style="color: #666; font-size: 10px;">profile link</span></div> <input type="text" name="facebook" value="{$currentFacebook}" />
+	</div>
+	<br />
+	<div class="addurlAds">
+		<div class="input-container">Twitter<br /><span style="color: #666; font-size: 10px;">twitter link</span></div> <input type="text" name="twitter" value="{$currentTwitter}" />
+	</div>
+	<br />
+	<div class="addurlAds">
+		<div class="input-container">Google Plus<br /><span style="color: #666; font-size: 10px;">profile link</span></div> <input type="text" name="gplus" value="{$currentGplus}" />
+	</div>
+	<br />
+	<div class="addurlAds">
+		<div class="input-container">Bio<br /><span style="color: #666; font-size: 10px;">160 characters or less</span></div>
+		<textarea class="ads" name="bio">{$currentBio}</textarea>
+	</div>
+</div>
+<div class="divider"></div>
+<div class="inner-page">
+	<div class="input-container"></div><input type="submit" name="general" value="Save Changes"/>
+</div>
+</form>

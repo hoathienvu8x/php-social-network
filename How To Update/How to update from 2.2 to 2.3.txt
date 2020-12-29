@@ -1,0 +1,11 @@
+How to update from v2.2 to v2.3
+
+-------- IMPORTANT: REMEMBER TO DO A FULL-BACKUP (FTP/MYSQL) BEFORE STARTING ----------
+---------------------------------------------------------------------------------------
+Replace the following files with the new ones:
+
+/requests/me.php
+/requests/profile.php
+/requests/profile_public.php
+---------------------------------------------------------------------------------------
+Or you can do a clean-install.

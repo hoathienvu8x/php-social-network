@@ -1,0 +1,21 @@
+<div class="sidebar">
+	<div class="sidebar-image">
+		<a href="{$url}/index.php?a=profile&u={$username}">{$image}</a>
+	</div>
+	<div class="sidebar-details">
+		<div class="sidebar-username">
+			<h5>{$username}</h5>
+		</div>
+		{$website}
+		{$location}
+		
+	</div>
+	{$bio}
+</div>
+<div class="divider"></div>
+<div class="sidebar">
+	<div class="sidebar-stats"><a href="{$url}/index.php?a=profile&u={$username}"><span style="font-size: 18px; font-family: 'wf_SegoeUILight', 'Segoe UI', 'Segoe UI Light', 'Segoe WP Light', 'Tahoma', Arial, Verdana, sans-serif; font-weight: bold; color: #000;">{$messages}</span> messages</div>
+	<div class="sidebar-stats"><a href="{$url}/index.php?a=profile&u={$username}&f=followers"><span style="font-size: 18px; font-family: 'wf_SegoeUILight', 'Segoe UI', 'Segoe UI Light', 'Segoe WP Light', 'Tahoma', Arial, Verdana, sans-serif; font-weight: bold; color: #000;">{$followers}</span> followers</a></div>
+	<div class="sidebar-stats"><a href="{$url}/index.php?a=profile&u={$username}&f=following"><span style="font-size: 18px; font-family: 'wf_SegoeUILight', 'Segoe UI', 'Segoe UI Light', 'Segoe WP Light', 'Tahoma', Arial, Verdana, sans-serif; font-weight: bold; color: #000;">{$following}</span> following</a></div>
+</div>
+{$social}

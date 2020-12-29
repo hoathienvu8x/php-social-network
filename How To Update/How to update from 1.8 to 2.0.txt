@@ -1,0 +1,30 @@
+How to update from v1.8 to v2.0
+
+-------- IMPORTANT: REMEMBER TO DO A FULL-BACKUP (FTP/MYSQL) BEFORE STARTING ----------
+
+Open your PHP My Admin and navigate to the database of the script, now click the SQL tab and run the following query:
+
+ALTER TABLE  `messages` ADD  `media` VARCHAR( 256 ) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+
+After that, run the following query:
+
+ALTER TABLE  `messages` ADD  `video` VARCHAR( 256 ) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+
+After that, run the following query as well:
+
+ALTER TABLE  `settings` ADD  `sizemsg` INT NOT NULL ,
+ADD  `formatmsg` VARCHAR( 256 ) NOT NULL
+
+If you receive a message that the query was successfull then you have updated your script.
+
+---------------------------------------------------------------------------------------
+Files affected:
+/images/ (the entire folder)
+/sources/ (the entire folder)
+/requests/ (the entire folder)
+/skin/ (the entire folder)
+/index.php
+/style.css
+/uploads/ (folder structure, move the current images to /uploads/avatars/ and create a new directory called "media" in the /uploads/ folder)
+---------------------------------------------------------------------------------------
+Or you can do a clean-install.

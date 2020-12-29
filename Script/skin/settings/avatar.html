@@ -1,0 +1,37 @@
+<h3>Profile Picture Settings</h3>
+{$message}
+<div class="divider"></div>
+<div class="inner-page">
+	<div class="settings-image">{$image}</div>
+	<div class="settings-name">{$username}</div>
+	<div class="settings-change"><a href="{$url}/index.php?a=settings">General Settings</a><br /><a href="{$url}/index.php?a=settings&b=avatar">Change Profile Picture</a><br /><a href="{$url}/index.php?a=settings&b=security">Change Password</a></div>
+</div>
+<div class="divider"></div>
+<div class="inner-page">
+Your default profile picture is taken from <a href="http://en.gravatar.com" target="_blank">Gravatar</a>, you can change it <a href="http://en.gravatar.com" target="_blank">here</a> or upload a new one:
+</div>
+<div class="divider"></div>
+<div class="inner-page">
+	<div class="uploadForm">
+			<form id="upload" class="uploadForm" action="{$url}/index.php?a=settings&b=avatar" method="POST" enctype="multipart/form-data">
+
+			<input type="hidden" id="MAX_FILE_SIZE" name="MAX_FILE_SIZE" value="{$max_file_upload}" />
+
+			<div>
+				<input type="file" id="fileselect" name="fileselect[]" />
+			</div>
+
+			
+		</div>
+</div>
+<div class="divider"></div>
+<div class="inner-page">
+	<div class="input-container"><span style="color: #666; font-size: 10px;">upload image and use as default</span></div>
+		<input type="submit" value="Save Image" />
+	</form>
+	<form action="{$url}/index.php?a=settings&b=avatar" method="POST">
+	<div class="input-container"><span style="color: #666; font-size: 10px;">delete image and make Gravatar default</span></div>
+		<input type='hidden' name="deleteimg" />
+		<input type="submit" value="Delete Image" />
+	</form>
+</div>

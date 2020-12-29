@@ -1,0 +1,11 @@
+How to update from v1.6 to v1.7
+
+-------- IMPORTANT: REMEMBER TO DO A FULL-BACKUP (FTP/MYSQL) BEFORE STARTING ----------
+
+Open your PHP My Admin and navigate to the database of the script, now click the SQL tab and run the following query:
+
+ALTER TABLE  `messages` CHANGE  `message`  `message` TEXT CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+
+If you receive a message that the query was successfull then you have updated your script.
+---------------------------------------------------------------------------------------
+Or you can do a clean-install.

@@ -1,0 +1,5 @@
+How to update from v1.4 to v1.5
+------------------------------------------------------------------
+Copy the following files on your server:
+/sources/recover.php
+/includes/functions.php

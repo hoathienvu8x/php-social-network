@@ -1,0 +1,14 @@
+How to update from v2.4 to v2.5
+
+-------- IMPORTANT: REMEMBER TO DO A FULL-BACKUP (FTP/MYSQL) BEFORE STARTING ----------
+---------------------------------------------------------------------------------------
+Upload the following files to your server on their specific location.
+
+style.css
+/sources/profile.php
+/sources/messages.php
+/requests/report.php
+/skin/profile/profile.html
+/skin/messages/top.html
+---------------------------------------------------------------------------------------
+Or you can do a clean-install.

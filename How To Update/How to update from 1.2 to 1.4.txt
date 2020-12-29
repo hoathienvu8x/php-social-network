@@ -1,0 +1,34 @@
+How to update from v1.2 to v1.4
+
+-------- IMPORTANT: REMEMBER TO DO A FULL-BACKUP (FTP/MYSQL) BEFORE STARTING ----------
+
+Open your PHP My Admin and navigate to the database of the script, now click the SQL tab and run the following query:
+
+ALTER TABLE users ADD salted VARCHAR(256) NOT NULL AFTER private;
+
+If this was successfull too you can proceed to the next step:
+---------------------------------------------------------------------------------------
+Open /includes/config.php from your server
+
+Find the following:
+
+'search'		=> 'search',
+
+Add after:
+
+'recover'		=> 'recover',
+
+It should look like this:
+
+'search'		=> 'search',
+'recover'		=> 'recover',
+
+Save the file and upload over your current config.php file on your server.
+---------------------------------------------------------------------------------------
+Now copy the following files on your server:
+/sources/recover.php
+/skin/recover/ (the entire folder)
+/skin/welcome/form.html
+/includes/functions.php
+---------------------------------------------------------------------------------------
+Or you can do a clean-install.
