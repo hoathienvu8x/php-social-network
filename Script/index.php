@@ -45,7 +45,6 @@ if(isset($_COOKIE['username']) && isset($_COOKIE['password'])) {
 							  <a href="#"><div class="menu_visitor">Hello <strong>Visitor</strong></div></a>';
 }
 
-include './images/social.png';
 $resultSettings = mysql_fetch_row(mysql_query(getSettings($querySettings)));
 $TMPL['footer'] = $resultSettings[0];
 $TMPL['url'] = $conf['url'];
